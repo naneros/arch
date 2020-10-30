@@ -4,7 +4,7 @@ sudo pacman -S wayland
 sudo pacman -S sway
 sudo pacman -S dmenu
 sudo pacman -S rofi
-sudo pacman -S xorg-server-swayland
+sudo pacman -S xorg-server-xwayland
 sudo pacman -S i3status-rust
 sudo pacman -S alacritty
 sudo pacman -S chromium
@@ -19,6 +19,7 @@ sudo pacman -S jdk8-openjdk
 sudo pacman -S java8-openjfx
 sudo pacman -S mc
 sudo pacman -S ranger
+sudo pacman -S awesome awesome-terminal-fonts
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
