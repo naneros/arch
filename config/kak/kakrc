@@ -1,0 +1,25 @@
+
+colorscheme solarized-dark
+set global autocomplete prompt
+set global tabstop 4
+set global indentwidth 4
+
+add-highlighter global/ number-lines
+
+
+# PLUGINS
+
+source "%val{config}/plugins/plug.kak/rc/plug.kak"
+
+plug "alexherbo2/prelude.kak"
+
+plug "alexherbo2/auto-pairs.kak" %{
+    hook global WinCreate .* %{ auto-pairs-enable }
+}
+require-module auto-pairs
+
+plug "lePerdu/kakboard" %{
+    hook global WinCreate .* %{ kakboard-enable }
+}
+
+# END PLUGINS

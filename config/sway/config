@@ -33,7 +33,7 @@ default_border pixel 1
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/mros/Downloads/31722.jpg fill
+output * bg ~/arch/1776243.jpg fill
 #
 # Example configuration:
 #
@@ -68,6 +68,8 @@ output Virtual-1 resolution 1360x768 position 1360,768
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
+exec /usr/bin/lxsesion
+
 ### Key bindings
 #
 # Basics:
@@ -79,8 +81,14 @@ output Virtual-1 resolution 1360x768 position 1360,768
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    #bindsym $mod+d exec $menu
 
+    bindsym $mod+d exec rofi -show run
+    bindsym $mod+m exec rofi -modi drun -show drun
+    bindsym $mod+tab exec rofi -show window
+
+    
+    #
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
