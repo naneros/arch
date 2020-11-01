@@ -24,11 +24,12 @@ sudo pacman -S htop
 sudo pacman -S base-devel
 sudo pacman -S lxsession
 
-cd ..
+mkdir -p ~/gitrepos/
+cd ~/gitrepos
 git clone https://aur.archlinux.org/pikaur.git
 cd pikaur
 makepkg -fsri
-cd ../arch
+cd ~/arch
 
 mkdir -p ~/.config/kak/plugins/
 git clone https://github.com/robertmeta/plug.kak.git ~/.config/kak/plugins/plug.kak
