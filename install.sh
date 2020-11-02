@@ -23,6 +23,8 @@ sudo pacman -S wl-clipboard
 sudo pacman -S htop
 sudo pacman -S base-devel
 sudo pacman -S lxsession
+sudo pacman -S gucharmap
+sudo pacman -S imv
 
 mkdir -p ~/gitrepos/
 cd ~/gitrepos

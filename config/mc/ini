@@ -113,10 +113,10 @@ clipboard_paste=
 
 [Colors]
 base_color=
-alacritty=
+linux=
 color_terminals=
 
-linux=
+alacritty=
 
 [Panels]
 show_mini_info=true

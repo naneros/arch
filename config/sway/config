@@ -33,7 +33,7 @@ default_border pixel 1
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/arch/1776243.jpg fill
+output * bg ~/.cache/wallpaper fill
 #
 # Example configuration:
 #
@@ -129,8 +129,8 @@ exec /usr/bin/lxsesion
 # Workspaces:
 #
     # Switch to workspace
-    bindsym $mod+1 workspace number 1
-    bindsym $mod+2 workspace number 2
+    bindsym $mod+1 workspace "1"
+    bindsym $mod+2 workspace "2"
     bindsym $mod+3 workspace number 3
     bindsym $mod+4 workspace number 4
     bindsym $mod+5 workspace number 5
@@ -140,8 +140,8 @@ exec /usr/bin/lxsesion
     bindsym $mod+9 workspace number 9
     bindsym $mod+0 workspace number 10
     # Move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace number 1
-    bindsym $mod+Shift+2 move container to workspace number 2
+    bindsym $mod+Shift+1 move container to workspace "1"
+    bindsym $mod+Shift+2 move container to workspace "2"
     bindsym $mod+Shift+3 move container to workspace number 3
     bindsym $mod+Shift+4 move container to workspace number 4
     bindsym $mod+Shift+5 move container to workspace number 5
@@ -221,7 +221,7 @@ bindsym $mod+r mode "resize"
 bar {
     #swaybar_command waybar
     position top
-
+	strip_workspace_numbers yes
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
     status_command i3status-rs
@@ -229,7 +229,9 @@ bar {
     colors {
         statusline #ffffff
         background #002b3655
-        inactive_workspace #323232 #323232 #5c5c5c
+		#active_workspace  #002b36 #002b36 #ffffff
+		focused_workspace  #657b83 #002b36 #ffffff
+		inactive_workspace #323232 #323232 #5c5c5c
     }
 }
 
