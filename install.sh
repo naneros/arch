@@ -26,6 +26,9 @@ sudo pacman -S lxsession
 sudo pacman -S gucharmap
 sudo pacman -S imv
 
+git config --global user.email "naneros21@gmail.com"
+git config --global user.name "naneros"
+
 mkdir -p ~/gitrepos/
 cd ~/gitrepos
 git clone https://aur.archlinux.org/pikaur.git
