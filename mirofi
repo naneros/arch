@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+option=`echo -e "Exit\nPower off\nReboot" | rofi -dmenu | tr -d '\r\n'`
+
+echo $option

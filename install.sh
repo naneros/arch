@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # add -> GRUB_CMDLINE_LINUX="apparmor=1 security=apparmor" -> to /etc/default/grub
-# exec -> grub-mkconfig -o /boot/grub/grub.cfg
+# exec -> sudo grub-mkconfig -o /boot/grub/grub.cfg
+# exec -> sudo systemctl start apparmor.service
+# exec -> sudo systemctl enable apparmor.service
+# 
 # exec -> firecfg
 
 sudo pacman -S wayland
@@ -12,17 +15,17 @@ sudo pacman -S xorg-server-xwayland
 sudo pacman -S i3status-rust
 sudo pacman -S alacritty
 sudo pacman -S chromium
-sudo pacman -S firefox
+#sudo pacman -S firefox
 sudo pacman -S kakoune
 sudo pacman -S nano
-sudo pacman -S git
+#sudo pacman -S git
 sudo pacman -S xf86-video-amdgpu
 sudo pacman -S alsa-utils
 sudo pacman -S pulseaudio
 sudo pacman -S pavucontrol
 sudo pacman -S rsync
-sudo pacman -S jdk8-openjdk
-sudo pacman -S java8-openjfx
+#sudo pacman -S jdk8-openjdk
+#sudo pacman -S java8-openjfx
 sudo pacman -S mc
 sudo pacman -S awesome awesome-terminal-fonts
 sudo pacman -S wl-clipboard
@@ -44,7 +47,7 @@ cd pikaur
 makepkg -fsri
 cd ~/arch
 
-sudo pikaur -S brave-bin
+# sudo pikaur -S brave-bin
 
 
 mkdir -p ~/.config/kak/plugins/

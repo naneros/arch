@@ -86,7 +86,8 @@ exec /usr/bin/lxsesion
     bindsym $mod+d exec rofi -show run
     bindsym $mod+m exec rofi -modi drun -show drun
     bindsym $mod+tab exec rofi -show window
-
+    bindsym $mod+p exec xdotool -type 'hostias'
+    
     
     #
     # Drag floating windows by holding down $mod and left mouse button.
