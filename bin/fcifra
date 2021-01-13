@@ -1,0 +1,26 @@
+#! /bin/bash
+
+# small template for my bash shell scripts.
+
+set -o errexit  # the script ends if a command fails
+set -o pipefail # the script ends if a command fails in a pipe
+set -o nounset  # the script ends if it uses an undeclared variable
+# set -o xtrace # if you want to debug
+
+# Defaults values
+
+# Main function
+main() {
+    if [ $1 == "-e" ];
+    then
+        echo "$2" | gpg -c -a --quiet
+    fi
+
+    if [ $1 == "-d" ];
+    then
+        echo "$2" | gpg -d --quiet
+    fi
+
+}
+
+main "$@"

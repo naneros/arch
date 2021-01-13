@@ -1,0 +1,10 @@
+#!/bin/sh
+# [Gedit Tool]
+# Name=Herramienta nueva
+# Shortcut=<Primary>F5
+# Input=document
+# Output=replace-document
+# Applicability=all
+# Save-files=nothing
+
+gpg -d

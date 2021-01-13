@@ -1,0 +1,20 @@
+#! /bin/bash
+
+set -o errexit  # the script ends if a command fails
+set -o pipefail # the script ends if a command fails in a pipe
+set -o nounset  # the script ends if it uses an undeclared variable
+# set -o xtrace # if you want to debug
+
+option=`echo -e "Power off\nReboot\nExit" | rofi -dmenu | tr -d '\r\n'`
+
+if  [[ $option == "Power off" ]]; then
+    systemctl poweroff
+fi
+
+if  [[ $option == "Reboot" ]]; then
+    systemctl reboot
+fi
+
+if  [[ $option == "Exit" ]]; then
+    swaymsg exit
+fi

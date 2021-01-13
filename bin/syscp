@@ -1,0 +1,17 @@
+#! /bin/bash
+
+set -o errexit  # the script ends if a command fails
+set -o pipefail # the script ends if a command fails in a pipe
+set -o nounset  # the script ends if it uses an undeclared variable
+# set -o xtrace # if you want to debug
+
+if [ $1 == "-c" ];
+then
+    sudo rsync -aAXv --delete / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home"} ~/.snapshot
+fi
+
+if [ $1 == "-r" ];
+then
+    sudo rsync -aAXv --delete ~/.snapshot/ --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home"} /
+fi
+
